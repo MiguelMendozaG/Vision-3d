@@ -79,10 +79,14 @@ La imagen \ref{fig:exit_ramp} es una imagen fácil de procesar y obtener buenos 
 
 
 \section{Conclusion}
-Los resultados obtenidos fueron buenos ya que en los videos se observa un buen comportamiento de las lineas. Se encontró un problema analizando los resultados de dos videos, uno de ellos con perturbaciones y el otro en buenas condiciones, se considera que controlando la distancia de la cámara de tal forma que los carriles entren en un rango de los pixeles entonces la máscara puede reducirse de tal forma que filtre las regiones más importantes de la imagen. Las perturbaciones de las sombras y cambios de intensidad de la luz generan que las lineas sean promediadas con ruido ocasionando que las líneas encontradas no sean pintadas correctamente. Se visualizan otros casos en los que evidentemente se tendran problemas, como por mencionar algunos: cuando un objeto entre en el campo de visión entre los carriles o cuando las líneas no estén perfectamente pintadas.
+Los resultados obtenidos fueron buenos ya que en los videos se observa un buen comportamiento de las lineas. Se encontró un problema analizando los resultados de dos videos, uno de ellos con perturbaciones y el otro en buenas condiciones, el problema consiste en que cuando se reduce el tamaño de la máscara para mejorar los resultados en el video con perturbaciones se pierde información en el video que está en buenas condiciones. Para solucionar dicho problema, controlar la distancia de la cámara de tal forma que los carriles entren en un rango de pixeles y de esta forma la máscara puede reducirse de tal forma que filtre las regiones más importantes de la imagen con perturbaciones.\\ Las perturbaciones de las sombras y cambios de intensidad de la luz generan que las lineas sean promediadas con ruido ocasionando que las líneas encontradas no sean pintadas correctamente. Se visualizan otros casos en los que evidentemente se tendran problemas, como por mencionar algunos: cuando un objeto ageno a las líneas entre en el campo de visión entre los carriles o cuando las líneas no estén perfectamente pintadas. 
+
+
+\bibliographystyle{acm}
+\bibliography{tarea1}
 
 \begin{figure}[h]
-\includegraphics[scale = 0.25]{exit_ramp.jpg}
+\includegraphics[scale = 0.2]{exit_ramp.jpg}
 \caption{Escena principal}
 \label{fig:exit_ramp}
 \end{figure}
@@ -122,8 +126,5 @@ Los resultados obtenidos fueron buenos ya que en los videos se observa un buen c
 \caption{Líneas detectadas}
 \label{fig:final}
 \end{figure}
-
-\bibliographystyle{acm}
-\bibliography{tarea1}
 
 \end{document}
