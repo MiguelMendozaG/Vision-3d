@@ -1,0 +1,115 @@
+\documentclass[10pt]{IEEEtran}
+
+\usepackage{listings}
+\usepackage[USenglish]{babel}
+\usepackage{graphicx} % figuras
+\usepackage{subfigure} % subfigura
+\usepackage[utf8]{inputenc}
+\usepackage{cite} 
+\usepackage{hyperref}
+\usepackage{algpseudocode}
+%\usepackage[dvips]{graphicx}
+
+
+
+\title{Tarea 2. Pendiente }
+
+\author{Miguel Mendoza}
+\newcounter{neq}
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}
+
+\section{Desarrollo}
+
+\section{Algoritmo}
+
+\section{Resultados}
+
+
+\section{Conclusion}
+
+
+\section{Appendix}
+A study was conducted at Virginia Tech to determine if certain static arm-strength measures have an influence on the “dynamic lift” characteristics of an individual. Twenty-five individuals were subjected to strength tests and then were asked to perform a weightlifting test in which weight was dynamically lifted overhead. The data are given here.\\
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Individual & Arm Strength x & Dynamic Lift y\\
+\hline \hline 
+1 & 17.3 & 71.7 \\ \hline
+2 & 19.3 & 71.7 \\ \hline
+3 & 19.5 & 88.3\\ \hline
+4 & 19.7 & 75.0\\ \hline
+5 & 22.9 & 91.7\\ \hline
+6 & 23.1 & 100.0\\ \hline
+7 & 26.4 & 73.3\\ \hline
+8 & 26.8 & 65.0\\ \hline
+9 & 27.6 & 75.0\\ \hline
+10& 28.1&88.3\\ \hline
+11& 28.2&68.3\\ \hline
+12&28.7& 96.7\\ \hline
+13&29.0&76.7\\ \hline
+14&29.6&78.3\\ \hline
+15&29.9&60.0\\ \hline
+16&29.9&71.7\\ \hline
+17&30.3&85.0\\ \hline
+18&31.3&85.0\\ \hline
+19&36.0&88.3\\ \hline
+20&39.5&100.0\\ \hline
+21&40.4&100.0\\ \hline
+22&44.3&100.0\\ \hline
+23&44.6&91.7\\ \hline
+24&50.4&100.0\\ \hline
+25&55.9&71.7\\ \hline
+\end{tabular}
+\caption{}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
+Then: \\
+(a) Estimate $\beta_{0}$ and $\beta_{1}$ for the linear regression curve $\mu_{{y}|{x}}$ = $\beta_{0} + \beta_{1} x$\\
+(b) Find a point estimate of $\mu_{{y}|{30}}$.\\
+(c) Plot the residuals versus the $x's$ (arm strength). Comment.\\
+
+\textit{\textbf{Answer}}\\
+(a) According with the formulas \ref{ec1} and \ref{ec2} $b_{0}$ and $b_{1}$ is calculated.
+
+\begin{equation}
+\label{ec1}
+b_{1} = \frac{n\sum_{i=1}^{n}x_{i}y_{i}-(\sum_{i=1}^{n}x_{i})(\sum_{i=1}^{n}y_{i})}{n\sum_{i=1}^{n}x_{i}^{2} - (\sum_{i=1}^{n}x_{i})^{2}} 
+\end{equation}
+
+\begin{equation}
+\label{ec2}
+b_{0} = \frac{\sum_{i=1}^{n}y_{i} - b_{1}\sum_{i=1}^{n} x_{1}}{n}
+\end{equation}
+ Therefore,\\\\
+$b_{1} = \frac{25 * 65164.04 - 778.7*2050}{25*26591.63 - 778.72} = 0.56$ and\\\\
+$b_{0} = \frac{2050 - 0.56*778.7}{25} = 64.53$ .\\\\
+
+Thus, estimating the linear regression:\\\\
+$ \hat{y} = 64.53 + 0.56 * x$\\\\
+
+(b) $\mu_{{y}|{30}} = 64.53 + 0.56 * (30) = 81.36$\\\\
+(c) The ploted results are shown in the figure \ref{plot1}
+
+
+
+\begin{figure}
+\includegraphics[scale=0.5]{figure_1.png}
+\caption{Residuals vs arm's strength}
+\label{plot1}
+\end{figure}
+
+
+\bibliographystyle{acm}
+\bibliography{tarea1}
+
+
+\end{document}
